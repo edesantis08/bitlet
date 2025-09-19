@@ -1,0 +1,82 @@
+:root {
+  font-family: 'IBM Plex Mono', 'Courier New', monospace;
+  background-color: #0a0f14;
+  color: #e6f2ff;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+#app {
+  position: relative;
+}
+
+#game-canvas {
+  border: 2px solid #3a5e6f;
+  image-rendering: pixelated;
+  display: block;
+}
+
+#ui-root {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  font-size: 18px;
+  padding: 16px;
+}
+
+button,
+input,
+select {
+  font-family: inherit;
+}
+
+.overlay-panel {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(8, 12, 18, 0.92);
+  border: 2px solid #3a5e6f;
+  padding: 24px 32px;
+  max-width: 420px;
+  text-align: center;
+  pointer-events: auto;
+}
+
+.overlay-panel h1,
+.overlay-panel h2 {
+  margin-top: 0;
+}
+
+.button-row {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+label.option {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 8px 0;
+  gap: 8px;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
